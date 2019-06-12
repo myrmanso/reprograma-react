@@ -83,7 +83,7 @@ ReactDOM.render(<Contador />, document.getElementById('root'));
 
 ```
 
-####Exercício 02
+#### Exercício 02
 _Você pode ver também essa resolução no diretório exrcicio-temperatura/src/index.js_
 
 Fazer dois cards mostrando a temperatura do dia usando obj declarados no escopo global
@@ -211,7 +211,7 @@ ReactDOM.render(<Container />, document.getElementById('root'));
 
 ```
 
-####Exercício 03
+#### Exercício 03
 Pegar o [exercío 02](https://github.com/myrmanso/reprograma-react/tree/master/semana_01/aula_03####Exercício02) e dividir as partes JSX em componentes funcionais e chamar em outro Compoonente.
 
 
