@@ -3,6 +3,7 @@
 _Para clonar esse repositório usar o comando_
 
 ```
+cd my-app
 npm install 
 npm start
 
