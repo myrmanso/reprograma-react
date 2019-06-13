@@ -1,4 +1,4 @@
-# Semana 01  React -- FUNÇÕES, ESCOPO, ESTADO
+# Semana 01  React -- FUNÇÕES, ESCOPO
 
 _Para clonar esse repositório usar o comando_
 
@@ -317,64 +317,8 @@ ReactDOM.render(<Temperatura />, document.getElementById('root'));
 
 <hr />
 
-## Estados
-
-* Só o \ReactDOM.render()\ faz a conexão do meu código js para a tela, porém toda vez que ele é chamado a tela renderiza (atualiza)
-
-* Para que isso não ocorra o React possui uma método que redenriza apenas aquele elemento chamado constructor() que possuí uma propriedade state.
-
-```javascript
-
-let cont = 0;
-
-class Contador extends React.Component{
-    constructor(props){
-        super(props);
-            this.state = {
-                cont: 0
-            }
-        
-        this.addUm = this.addUm.bind(this)
-        this.reset = this.reset.bind(this)
-
-    }
-    
-
-    addUm =() =>{
-        this.setState((estadoAnterior) => {
-            return {
-                cont: estadoAnterior.cont + 1
-            }
-        })
-        
-    }
-
-    reset =() =>{
-        this.setState(() => {
-            return {
-                cont: 0
-            }
-        }) 
-    }
-
-    render(){
-        return(
-            <div>
-                
-                <h2>Count: {this.state.cont}</h2>
-                <button onClick={this.addUm}>+1</button>
-                <button onClick={this.reset}>Reset</button>
-
-            </div>
-        )
-    }
-
-}
-
-ReactDOM.render(<Contador />, document.getElementById('root'));
 
 
-```
 
 
 
