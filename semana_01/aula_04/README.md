@@ -17,7 +17,7 @@ _colar o exercicio desejado no **index.js**_
 
 * Para que isso não ocorra o React possui uma método que redenriza apenas aquele elemento.
 
-![exemplo de como usar o this.state](./state.png)
+![exemplo de como usar o this.state](./state.jpg)
 
 ```javascript
 
@@ -175,7 +175,7 @@ true && "retorna o segundo valor"
 
 
 [Diagrama do Ciclo de Vida](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-![Diagrama do Ciclo de Vida](./ciclos-de-vida.png)
+![Diagrama do Ciclo de Vida](./ciclos-de-vida.jpg)
 
 
 ##IMPORTAR ARQUIVO
@@ -214,7 +214,7 @@ export default Tabela; //SEMPRE utilido para que possamos importar esse arquivo 
 
 No index.js colaremos dessa maneira:
 
-![importação de arquivos no react](./import.png)
+![importação de arquivos no react](./import.jpg)
 
 
 
