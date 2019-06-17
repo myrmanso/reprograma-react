@@ -1,0 +1,94 @@
+.cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pagina {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagina__botao {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.pagina__botao > button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #242038;
+    cursor: pointer;
+}
+
+.botao-imagem{
+    display: block;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.botao-icone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.formulario {
+    width: 100%;
+}
+
+.botao {
+    background: linear-gradient(179.24deg, #834FC6 -27.71%, #F7D9BB -12.76%, #834FC6 78.2%);
+    border-radius: 3px;
+    color: #242038;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 15px;
+    border: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.botao--desabilitado {
+    color: gray;
+    background: lightgrey;
+    pointer-events: none;
+}
+
+.campo {
+    font-size: 1rem;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0 0 1rem;
+    border: 1px solid #242038;
+    border-radius: 3px;
+  }
+  
+  .campo:focus {
+    outline: none;
+    border-color: #834FC6 ;
+    box-shadow: 0 0 10px #9351b4;
+  }
+
+.grupo__erro {
+    color: red;
+    font-size: small;
+}
+
+  form {
+      width: 100%;
+  }
