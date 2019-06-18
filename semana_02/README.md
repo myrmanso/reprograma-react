@@ -71,3 +71,64 @@ ReactDOM.render(
 
 * [React bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
 
+# AULA 02
+
+## [Formulário](https://pt-br.reactjs.org/docs/forms.html#___gatsby)
+
+
+```html
+<form>
+  <label>
+    Nome:
+    <input type="text" name="name" />
+  </label>
+  <input type="submit" value="Enviar" />
+</form>
+```
+Esse formulário tem o comportamento padrão do HTML de navegar para uma nova página quando o usuário enviar o formulário. Se você quer esse comportamento no React, ele simplesmente funciona. Mas na maioria dos casos, é conveniente ter uma função Javascript que manipula o envio de um formulário e tem acesso aos dados que o usuário digitou nos inputs. O modo padrão de fazer isso é com uma técnica chamada [“componentes controlados”](https://pt-br.reactjs.org/docs/forms.html#controlled-components) (controlled components).
+
+```javascript
+
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('Um nome foi enviado: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Nome:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Enviar" />
+      </form>
+    );
+  }
+}
+
+```
+
+```js
+
+handleChange = (nomeDoInput, valorDoInput, erro = '') => {
+        console.log(e.target)
+        
+        const nomeDoInput = e.target.name //ele vai pegar o name do input
+        this.setState({
+            [nomeDoInput] : e.target.value, //aqui ele vai setar o this.state.valor para o nome do input, dessa forma se o nome do input for nomeSobrenome o this.state.nomeSobrenome : e.target.value
+        })
+    }
+
+```
+
