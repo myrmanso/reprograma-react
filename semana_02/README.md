@@ -1,4 +1,4 @@
-# AULA 01
+# [AULA 01](https://github.com/myrmanso/reprograma-react/tree/master/semana_02/aula_01/my-app)
 
 
 ## REACT ROUTER
@@ -23,9 +23,13 @@ para utilizar ele é necessário importar ele na página "mãe"
 ```javascript
 import {Switch, Route} from 'react-router-dom'
 
-/* Para chamar um componente e ele ser renderizado é necessário chamar assim:*/
-	<Route path="/"  exact component={Home} /> //Quando for a página index
-	<Route path="/pagina2"   component={Página2} /> //Para as demais páginas
+/* Para chamar um componente e ele ser renderizado é necessário chamar assim: 
+as rotas são chamadas como parâmetros 'components={parametro}'
+*/
+	<Switch>
+		<Route path="/"  exact component={Home} /> //Quando for a página index é preciso colocar 'exact' que é exatamente aquele texto
+		<Route path="/pagina2"   component={Página2} /> //Para as demais páginas 
+	</Switch>
 
 /* No index.js ele será importado dessa maneira */
 import {BrowserRouter as Router} from 'react-router-dom';
@@ -33,12 +37,11 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 
 * Para linkarmos as rotas 
-é um componente a, mas ele faz parte da biblioteca do Router e é chamdo dessa maneira no JSX
-
+importamos ele no arquivo e passamos ele como JSX dando props para ele (to="") e children (filho dentro das tags)
 ```javascript
 import { Link } from 'react-router-dom'
 
-<Link to="/" className="navbar-links__ativo">Home</Link>
+<Link to="/" className="navbar-links__ativo">Home-children</Link>
 ```
 
 * Para renderizar a tua página com as rotas é necessário inserir um JSX chamando o Router e colocando teu componente Principal a ser renderizado
@@ -67,3 +70,4 @@ ReactDOM.render(
 	* [intalação](https://ant.design/docs/react/introduce) 
 
 * [React bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
+
