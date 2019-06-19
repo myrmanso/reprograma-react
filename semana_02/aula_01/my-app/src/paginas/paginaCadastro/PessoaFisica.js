@@ -1,6 +1,6 @@
 import React from 'react'
-import Legenda from '../../componentes/cadastro/formulario/Legenda'
-import CaixaTexto from '../../componentes/cadastro/formulario/CaixaTexto'
+import Grupo from '../../componentes/cadastro/formulario/Grupo'
+import BotaoSubmit from '../../componentes/cadastro/formulario/BotaoSubmit'
 
 
 class PessoaFisica extends React.Component{
@@ -32,6 +32,7 @@ class PessoaFisica extends React.Component{
     }
 
     handleSubmit = e => {
+        this.props.alteraConteudo(this.props.conteudo)
         e.preventDefault()
     }
 
@@ -42,88 +43,121 @@ class PessoaFisica extends React.Component{
                 valor: valorDoInput,
                 erro: erro
             }
-            })
+        })
+    }
+
+
+    estaDesabilitado = () => {
+        const {nomeSobrenome, numeroDoCpf, dataDeNascimento, email, senha} = this.state
+
+        if(!nomeSobrenome.valor|| nomeSobrenome.erro || !numeroDoCpf.valor || numeroDoCpf.erro || !dataDeNascimento.valor || dataDeNascimento.erro || !email.valor || email.erro || !senha.valor || senha.erro){
+            return true
+        }else{
+            return false
+        }
     }
 
     render(){
+        const desabilitado = this.estaDesabilitado()
+        const {nomeSobrenome, numeroDoCpf, dataDeNascimento, email, senha} = this.state
+
         return(
             <div className="pagina">
                 <h2>Pessoa Física</h2>
                 <form className="formulario" onSubmit={this.handleSubmit}>
                     <div>
-                        <Legenda
-                        htmlForLegenda="nomeSobrenome">
-                            Nome Completo:
-                        </Legenda>
-                        <CaixaTexto
-                            type="text" 
-                            className="campo" 
-                            id="nomeSobrenome" 
-                            placeholder="Nome" 
-                            value={this.state.nomeSobrenome} 
-                            name="nomeSobrenome" 
-                            onChange={this.handleChange} 
-                        />
+                        <Grupo erro={nomeSobrenome.erro}>
+                            <Grupo.Legenda
+                                htmlForLegenda="nomeSobrenome">
+                                Nome Completo:
+                            </Grupo.Legenda>
+                            <Grupo.CaixaTexto
+                                required={true}
+                                type="text" 
+                                className="campo" 
+                                id="nomeSobrenome" 
+
+                                placeholder="Nome" 
+                                value={nomeSobrenome.valor} 
+                                name="nomeSobrenome" 
+                                onChange={this.handleChange} 
+                            />
+                        </Grupo>
                     </div>
                     <div>
-                        <Legenda
-                        htmlForLegenda="numeroDoCpf">
-                            CPF:
-                        </Legenda>
-                        <CaixaTexto
-                            type="text" 
-                            className="campo" 
-                            id="numeroDoCpf"
-                            placeholder="000.000.000-00" 
-                            value={this.state.numeroDoCpf} 
-                            name="numeroDoCpf" 
-                            onChange={this.handleChange} 
-                        />
+                        <Grupo erro={numeroDoCpf.erro}>
+                            <Grupo.Legenda
+                                htmlForLegenda="numeroDoCpf">
+                                CPF:
+                            </Grupo.Legenda>
+                            <Grupo.CaixaTexto
+                                required={true}
+                                type="text" 
+                                className="campo" 
+                                id="numeroDoCpf"
+                                placeholder="000.000.000-00" 
+                                value={numeroDoCpf.valor} 
+                                name="numeroDoCpf" 
+                                onChange={this.handleChange} 
+                            />
+                        </ Grupo>
                     </div>
                     <div>
-                        <Legenda
-                        htmlForLegenda="dataDeNascimento">
-                            Data de nascimento:
-                        </Legenda>
-                        <CaixaTexto
-                            className="campo" 
-                           type="date" 
-                           id="dataDeNascimento"
-                           placeholder="dd/mm/aaaa" 
-                           value={this.state.dataDeNascimento} 
-                           name="dataDeNascimento" 
-                           onChange={this.handleChange} 
-                        />
+                        <Grupo erro={dataDeNascimento.erro}>
+                            <Grupo.Legenda
+                                htmlForLegenda="dataDeNascimento">
+                                Data de nascimento:
+                            </Grupo.Legenda>
+                            <Grupo.CaixaTexto
+                                required={true}
+                                className="campo" 
+                                type="text" 
+                                id="dataDeNascimento"
+                                placeholder="dd/mm/aaaa" 
+                                value={dataDeNascimento.valor} 
+                                name="dataDeNascimento" 
+                                onChange={this.handleChange} 
+                            />
+                        </ Grupo>
                     </div>
                     <div>
-                        <Legenda
-                        htmlForLegenda="email">
-                            Email:
-                        </Legenda>
-                        <CaixaTexto
-                            className="campo" 
-                           type="email" 
-                           id="email"
-                           placeholder="email@email.com" 
-                           value={this.state.email} 
-                           name="email" 
-                           onChange={this.handleChange}  
-                        />
+                        <Grupo erro={email.erro}>
+                            <Grupo.Legenda
+                                htmlForLegenda="email">
+                                Email:
+                            </Grupo.Legenda>
+                            <Grupo.CaixaTexto
+                                required={true}
+                                className="campo" 
+                                type="email" 
+                                id="email"
+                                placeholder="email@email.com" 
+                                value={email.valor} 
+                                name="email" 
+                                onChange={this.handleChange}  
+                            />
+                        </Grupo>
                     </div>
                     <div>
-                        <Legenda
-                        htmlForLegenda="senha">
-                            senha:
-                        </Legenda>
-                        <CaixaTexto
-                            className="campo" 
-                            type="password" 
-                            id="senha"
-                            placeholder="Senha" 
-                            value={this.state.senha} 
-                            name="senha" 
-                            onChange={this.handleChange}  
-                        />
+                        <Grupo erro={senha.erro}>
+                            <Grupo.Legenda
+                                htmlForLegenda="senha">
+                                senha:
+                            </Grupo.Legenda>
+                            <Grupo.CaixaTexto
+                                required={true}
+                                className="campo" 
+                                type="password" 
+                                id="senha"
+                                placeholder="Senha" 
+                                value={senha.valor} 
+                                name="senha" 
+                                onChange={this.handleChange}  
+                            />
+                        </Grupo>
+                        <BotaoSubmit  desabilitado = {desabilitado} acaoBotaoSubmit ={this.handleSubmit} className="botao">
+                            Enviar
+                        </BotaoSubmit>
                     </div>
                 </form>
 

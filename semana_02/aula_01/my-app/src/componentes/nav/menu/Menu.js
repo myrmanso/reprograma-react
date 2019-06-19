@@ -29,7 +29,7 @@ class Menu extends React.Component{
 
         return (
             <div className='navbar-menu navbar-links'>
-                <a className={classesDoBotao} onClick={this.handleAberto}>Menu</a>
+                <a className={classesDoBotao} onClick={this.handleAberto} href='#'>Menu</a>
                 <ul className={classeDasOpcoes}>
                     <li >
                         <Link to="/" className="navbar-links__ativo">

@@ -2,6 +2,7 @@ import React from 'react'
 import Inicial from './paginaCadastro/Inicial'
 import PessoaFisica from './paginaCadastro/PessoaFisica'
 import PessoaJuridica from './paginaCadastro/PessoaJuridica'
+import Final from './paginaCadastro/Final'
 import './cadastro.css'
 
 
@@ -14,7 +15,7 @@ class Cadastro extends React.Component{
         }
     }
 
-    trocarContaudo = (valorDoMeuConteudo) => {
+    trocarConteudo = (valorDoMeuConteudo) => {
         this.setState({conteudo: valorDoMeuConteudo}) //forma reduzida
         /* 
         this.setState((valorDoMeuConteudo) => {
@@ -28,9 +29,10 @@ class Cadastro extends React.Component{
     render (){
         return(
             <div className="cadastro">                
-                {this.state.conteudo === undefined && <Inicial alteraConteudo = {this.trocarContaudo}/>} 
-                {this.state.conteudo === "PF" && <PessoaFisica />}  
-                {this.state.conteudo === "PJ" && <PessoaJuridica />}   
+                {this.state.conteudo === undefined && <Inicial alteraConteudo = {this.trocarConteudo}/>} 
+                {this.state.conteudo === "PF" && <PessoaFisica conteudo="final" alteraConteudo = {this.trocarConteudo}/>}  
+                {this.state.conteudo === "PJ" && <PessoaJuridica />}  
+                {this.state.conteudo === "final" && <Final/>} 
             </div>
         )
     }
