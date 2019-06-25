@@ -1,0 +1,71 @@
+.loginPage {
+    max-width: 600px;
+    margin: auto;
+}
+
+.loginPage__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.loginPage__form {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.loginPage__inputWrap:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.loginPage__errorBox {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    background: #f7dedf;
+    color: #a94442;
+    margin: 15px 0;
+}
+
+.loginPage__label {
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.loginPage__input {
+    width: 100%;
+    transition: height .2s;
+    border: 1px solid #abe6f8;
+    border-radius: 4px;
+    resize: none;
+    padding: 8px;
+    font-size: 11px;  
+}
+.loginPage__input:not(:empty),
+.loginPage__input:focus {
+  box-shadow: 0 0 0 1px #ABE6F8;
+  outline: 0;
+}
+
+.loginPage__btnLogin {
+    color: white;
+    background-color: #58CEF2;
+    border-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 5px 11px;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    max-width: 100px;
+}

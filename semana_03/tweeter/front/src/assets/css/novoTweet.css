@@ -1,0 +1,53 @@
+/* novoTweet */
+.novoTweet {}
+.novoTweet:after {
+  content: "";
+  clear: both;
+  width: 100%;
+  display: block;
+}
+.novoTweet__editorArea {
+
+}
+.novoTweet__editor {
+  width: 100%;
+  transition: height .2s;
+  border: 1px solid #ABE6F8;
+  border-radius: 4px;
+  resize: none;
+  padding: 8px;
+  height: 40px;
+  font-size: 11px;
+}
+.novoTweet__editor:not(:empty),
+.novoTweet__editor:focus {
+  height: 80px;
+  box-shadow: 0 0 0 1px #ABE6F8;
+  outline: 0;
+}
+
+.novoTweet__status {
+  float: right;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.novoTweet__status--invalido {
+  color: red;
+}
+
+.novoTweet__envia {
+  float: right;
+  color: white;
+  background-color: #58CEF2;
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 5px 11px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 3px;
+}

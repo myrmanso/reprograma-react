@@ -1,0 +1,38 @@
+/* tweet */
+.tweet {
+  position: relative;
+  padding-left: 75px;
+  padding-right: 15px;
+  width: calc(100% + (15px * 2));
+  margin-left: -15px;
+}
+.tweet:not(:last-child) {
+  border-bottom: 2px solid #e6ecf0;
+  padding-bottom: 15px;
+  margin-bottom: 15px;  
+}
+.tweet__cabecalho {}
+.tweet__nomeUsuario {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 4px;
+}
+.tweet__userName {
+  font-size: 14px;
+}
+.tweet__fotoUsuario {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+}
+.tweet__conteudo {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.tweet__footer {
+  margin-top: 10px;
+}
