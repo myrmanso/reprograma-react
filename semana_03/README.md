@@ -66,3 +66,20 @@ let jsonOBJ = JSON.stringify(dadosDeLogin)
 JSON.paerse(jsonOBJ)
 
 ```
+
+
+## [Spread operator](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+
+
+Passa propriedade por propriedade de um objeto e por cada item de um array e "pega" as propriedades/os itens.
+
+```js
+const obj = { name: Mayara, idade: 25}
+const obj1 = {...obj} //{name: Mayara, idade: 25}
+
+
+
+let partes = ['ombros', 'joelhos'];
+let letra = ['cabeca', ...partes, 'e', 'dedos']; // ["cabeca", "ombros", "joelhos", "e", "dedos"]
+
+```

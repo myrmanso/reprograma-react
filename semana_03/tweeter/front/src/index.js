@@ -16,7 +16,6 @@ import "./assets/css/notificacao.css";
 import "./assets/css/novoTweet.css";
 // import './index.css';
 
-import Home from "../src/Pages/Home/Home";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(

@@ -45,7 +45,7 @@ class LoginPage extends Component {
                 // this.erro = res.message
                 this.setState({
                     erro : true,
-                    messageErro : res.message,
+                    messageErro : res.message
                 })
             })
         })
