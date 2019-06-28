@@ -10,7 +10,7 @@ class Tweet extends Component {
 
     render() {
         console.log(this.props)
-        const { usuario, conteudo, totalLikes, } = this.props
+        const { usuario, conteudo, totalLikes, remove, _id } = this.props
         return (
             <article className="tweet">
                 <div className="tweet__cabecalho">
@@ -24,7 +24,10 @@ class Tweet extends Component {
                     </span>
                 </p>
                 <footer className="tweet__footer">
-                    <button className="btn btn--clean">
+                    <button className = "btn btn--blue btn--remove" onClick = {() => remove(_id)}>
+                        X 
+                    </button>
+                    <button className="btn btn--clean">                    
                         <svg className="icon icon--small iconHeart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.5 47.5">
                             <defs>
                                 <clipPath id="a">
