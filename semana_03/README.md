@@ -83,3 +83,10 @@ let partes = ['ombros', 'joelhos'];
 let letra = ['cabeca', ...partes, 'e', 'dedos']; // ["cabeca", "ombros", "joelhos", "e", "dedos"]
 
 ```
+
+## API
+
+Duas formas de enviar dados para o back 
+
+Body: vc manda em JSON
+Rota: por parâmetro. Que seria pela rota 
