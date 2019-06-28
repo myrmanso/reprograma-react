@@ -42,6 +42,13 @@ class Home extends Component {
 
     }
 
+    removeTweet = (idRecebido) => {
+       console.log('ok exclui')
+       console.log(idRecebido)
+       const testeFilter = this.state.tweets.filter(elemento => elemento._id !== idRecebido)
+       this.setState({tweets: testeFilter})
+    }
+
 
     render(){
 
@@ -80,7 +87,7 @@ class Home extends Component {
 
                 <div className="tweetsArea">
                     {
-                        this.state.tweets.length > 0 ?  this.state.tweets.map((elemento, index) => (<Tweet {...elemento} key={index} />)) : <p>Digite um tweet</p>
+                        this.state.tweets.length > 0 ?  this.state.tweets.map((elemento, index) => (<Tweet {...elemento} key={index} remove={this.removeTweet} />)) : <p>Digite um tweet</p>
                     }
                 </div>
             </Widget>
