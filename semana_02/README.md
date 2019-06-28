@@ -132,3 +132,11 @@ handleChange = (nomeDoInput, valorDoInput, erro = '') => {
 
 ```
 
+<hr>
+
+## [Padrões em React: Criando Componentes](https://medium.com/@oieduardorabelo/padr%C3%B5es-em-react-criando-componentes-d35422034d75)
+
+
+## [AXIOS](https://www.npmjs.com/package/axios)
+faz requisições para api 
+
