@@ -1,0 +1,72 @@
+[
+    {
+        "usuario":{
+            "login": "omariosouto",
+            "nome": "Mario",
+            "sobrenome": "Souto",
+            "foto": "https://www.caelum.com.br/imagens/instrutores/fotos/mario-souto-120.jpg",
+            "email": "mario.souto@caelum.com.br"
+        },
+        "conteudo": "Neque instant #quisquam quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        "likes": [
+            {
+                "usuario": {
+                    "login": "artdiniz"
+                }
+            }
+        ],
+        "totalLikes": 1
+    },
+    {
+        "usuario":{
+            "login": "artdiniz",
+            "nome": "Artur",
+            "sobrenome": "Diniz",
+            "foto": "https://www.caelum.com.br/imagens/instrutores/fotos/artur-diniz-120.jpg",
+            "email": "artur.diniz@caelum.com.br"
+        },
+        "conteudo": "Daino instant quisquam est qui #dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        "likes": [],
+        "totalLikes": 0
+    },
+    {
+        "usuario":{
+            "login": "marcobrunobr",
+            "nome": "Marco",
+            "sobrenome": "Bruno",
+            "foto": "https://www.caelum.com.br/imagens/instrutores/fotos/marco-bruno-120.jpg",
+            "email": "marco.bruno@caelum.com.br"
+        },
+        "conteudo": "Ipsum instant quisquam est qui #dolorem ipsum quia dolor #sit amet, consectetur, adipisci velit.",
+        "likes": [
+            {
+                "usuario": {
+                    "login": "vanessametonini"
+                }
+            },
+            {
+                "usuario": {
+                    "login": "omariosouto"
+                }
+            }
+        ],
+        "totalLikes": 2
+    },
+    {
+        "usuario":{
+            "login": "vanessametonini",
+            "nome": "Vanessa",
+            "sobrenome": "Tonini",
+            "foto": "https://www.caelum.com.br/imagens/instrutores/fotos/vanessa-tonini-120.jpg",
+            "email": "vanessa.tonini@caelum.com.br"
+        },
+        "conteudo": "#Dasque instant quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        "likes": [],
+        "totalLikes": 0
+    }
+]
+
+
+
+
+

@@ -1,0 +1,37 @@
+/* btn */
+.btn {
+  padding: 3px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.btn--clean {
+  border: 0;
+  background: none;
+}
+.btn--blue {
+  vertical-align: bottom;
+  color: white;
+  background-color: #cccccc;
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 0px 6px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 3px;
+}
+.btn--blue:hover,
+.btn--blue:focus {
+  background-color: #58CEF2;
+}
+
+.btn--remove {
+  position: absolute;
+  top: -4px;
+  right: 15px;
+}
